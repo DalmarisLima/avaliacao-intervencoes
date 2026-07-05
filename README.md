@@ -1,6 +1,6 @@
 # Sistema de Avaliação de Intervenções Pedagógicas
 
-Aplicação web desenvolvida como **artefato de pesquisa** para a dissertação de mestrado em Informática na Educação (PPGI/UFRN). O sistema apoia professores na **configuração de critérios de sucesso** e na **interpretação da eficácia** de intervenções pedagógicas aplicadas a turmas, com base em indicadores de aprendizagem e de processo.
+Aplicação web desenvolvida como **artefato de pesquisa** para a dissertação de mestrado em Informática na Educação (PPGI/UFAL). O sistema apoia professores na **configuração de critérios de sucesso** e na **interpretação da eficácia** de intervenções pedagógicas aplicadas a turmas, com base em indicadores de aprendizagem e de processo.
 
 > **Pergunta operacional:** *A intervenção cadastrada foi eficaz para a aprendizagem, segundo os critérios que o próprio usuário definiu?*
 
