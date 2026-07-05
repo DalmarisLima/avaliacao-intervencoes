@@ -1,14 +1,14 @@
 # Sistema de Avaliação de Intervenções Pedagógicas
 
-Aplicação web desenvolvida como **artefato de pesquisa** para a dissertação no Programa de Pós-Graduação em Informática (PPGI) pela Universidade Federal de Alagoas(UFAL). O sistema apoia professores na **configuração de critérios de sucesso** e na **interpretação da eficácia** de intervenções pedagógicas aplicadas a turmas, com base em indicadores de aprendizagem e de processo.
+Aplicação web para **avaliação de intervenções pedagógicas** em turmas. O professor configura critérios de sucesso (limiares de aderência, temporalidade e desempenho), registra intervenções por turma e analisa se a ação foi **eficaz para a aprendizagem**, com base em indicadores de processo e em comparação pré/pós.
 
-> **Pergunta operacional:** *A intervenção cadastrada foi eficaz para a aprendizagem, segundo os critérios que o próprio usuário definiu?*
+> **Pergunta que o sistema responde:** *A intervenção foi eficaz para a aprendizagem, segundo os critérios que o próprio usuário definiu?*
 
 ---
 
 ## Sumário
 
-- [Contexto e objetivo](#contexto-e-objetivo)
+- [Objetivo](#objetivo)
 - [Funcionalidades](#funcionalidades)
 - [Metodologia de avaliação](#metodologia-de-avaliação)
 - [Fluxo de uso](#fluxo-de-uso)
@@ -19,52 +19,49 @@ Aplicação web desenvolvida como **artefato de pesquisa** para a dissertação 
 - [Testes automatizados](#testes-automatizados)
 - [Deploy em produção](#deploy-em-produção)
 - [Documentação complementar](#documentação-complementar)
-- [Licença e uso acadêmico](#licença-e-uso-acadêmico)
+- [Licença](#licença)
 
 ---
 
-## Contexto e objetivo
+## Objetivo
 
-O software implementa um protótipo funcional de **plataforma de avaliação de intervenções pedagógicas**. Nele, o professor:
+A plataforma apoia o ciclo de avaliação de uma intervenção pedagógica em três momentos:
 
-1. Cadastra uma intervenção pedagógica;
-2. Define um **cenário de avaliação** (Flexível ou Difícil) e ajusta **limiares** de aderência, temporalidade e desempenho;
-3. Analisa **resultados agregados** por turma, com veredito de eficácia e interpretação pedagógica.
+1. **Leitura** — descrição da intervenção aplicada à turma;
+2. **Configuração** — escolha do cenário (Flexível ou Difícil) e definição dos limiares de avaliação;
+3. **Análise** — visualização de resultados, veredito de eficácia e interpretação pedagógica.
 
-Os dados de alunos utilizados no protótipo são **sintéticos e reprodutíveis** (arquivos JSON por turma e cenário), permitindo demonstração e validação do sistema sem integração com ambientes reais de gestão de aprendizagem.
+Os dados de alunos são **sintéticos** (arquivos JSON por turma e cenário em `data/turmas/`), o que permite usar e testar a ferramenta de forma reprodutível, sem depender de um sistema externo de gestão de aprendizagem.
 
 ---
 
 ## Funcionalidades
 
-| Área | Descrição |
-|------|-----------|
-| **Autenticação** | Login de professor com e-mail e senha |
-| **Intervenções** | Listagem e criação de intervenções vinculadas ao usuário e à turma |
-| **Wizard em 3 etapas** | Leitura → definição de cenário → resultados |
-| **Cenários** | Flexível e Difícil, com limiares padrão sugeridos e ajustáveis |
-| **Geração de dados** | Avaliações PRÉ e PÓS sintéticas por aluno ao salvar o cenário |
-| **Resultados** | Dashboard com métricas, veredito (Eficaz / Não eficaz / Sem relevância) e interpretação em camadas |
-| **Turmas** | Visão das turmas disponíveis e datasets associados |
-| **Metodologia** | Download do documento formal de metodologia de eficácia (PDF) |
-| **API JSON** | Endpoints autenticados para painéis dinâmicos na tela de resultados |
+| Módulo | Descrição |
+|--------|-----------|
+| **Autenticação** | Acesso com e-mail e senha |
+| **Intervenções** | Listagem e criação de intervenções por usuário e turma |
+| **Wizard (3 etapas)** | Leitura → cenário → resultados |
+| **Cenários** | Flexível e Difícil, com limiares padrão editáveis |
+| **Avaliações sintéticas** | Geração automática de dados PRÉ e PÓS por aluno ao salvar o cenário |
+| **Resultados** | Métricas agregadas, veredito (Eficaz / Não eficaz / Sem relevância) e interpretação em camadas |
+| **Turmas** | Consulta às turmas disponíveis e respectivos datasets |
+| **Metodologia** | Download do documento de metodologia de eficácia |
+| **API JSON** | Endpoints autenticados para gráficos e painéis na tela de resultados |
 
 ---
 
 ## Metodologia de avaliação
 
-A classificação de eficácia combina:
+A eficácia é calculada a partir de:
 
-- **Desempenho (central):** comparação pré → pós por aluno aderente. Sem ganho de desempenho, a intervenção é **não eficaz**, independentemente dos demais indicadores.
+- **Desempenho (indicador central):** ganho de desempenho pré → pós por aluno aderente. Sem ganho, a intervenção é classificada como **não eficaz**, independentemente dos demais indicadores.
 - **Processo:** adesão, aderência e temporalidade (início e fim da atividade).
-- **Critérios de referência:** limiares definidos pelo usuário na etapa de cenário.
+- **Limiares:** valores mínimos ou máximos definidos pelo usuário na etapa de cenário.
 
-Documentação detalhada:
+Detalhes em [`docs/metodologia-avaliacao-eficacia.md`](docs/metodologia-avaliacao-eficacia.md) e [`docs/regras-negocio.md`](docs/regras-negocio.md).
 
-- [`docs/metodologia-avaliacao-eficacia.md`](docs/metodologia-avaliacao-eficacia.md) — fundamentação e regras
-- [`docs/regras-negocio.md`](docs/regras-negocio.md) — regras formais implementadas
-
-### Limiares padrão por cenário
+### Limiares padrão sugeridos
 
 | Cenário | Aderência (≥) | Temp. início (≤) | Temp. fim (≤) | Desempenho (≥) |
 |---------|---------------|-------------------|---------------|----------------|
@@ -77,16 +74,16 @@ Documentação detalhada:
 
 ```mermaid
 flowchart LR
-    A[Login] --> B[Etapa 1 — Leitura da intervenção]
-    B --> C[Etapa 2 — Definição de cenário]
+    A[Login] --> B[Etapa 1 — Leitura]
+    B --> C[Etapa 2 — Cenário e limiares]
     C --> D[Geração PRÉ/PÓS]
     D --> E[Etapa 3 — Resultados]
 ```
 
-1. Acesse `/login` e autentique-se.
-2. Em **Intervenções → Nova**, leia a descrição da intervenção pedagógica.
-3. Clique em **Definir cenário de avaliação**, escolha Flexível ou Difícil e ajuste os limiares.
-4. Ao salvar, o sistema gera os dados sintéticos e redireciona para **Resultados**, onde é possível analisar a eficácia por turma e intervenção.
+1. Acesse `/login` e entre com suas credenciais.
+2. Em **Intervenções → Nova**, leia a descrição da intervenção.
+3. Clique em **Definir cenário de avaliação**, selecione Flexível ou Difícil e ajuste os limiares.
+4. Ao salvar, o sistema gera os dados e abre **Resultados** com a análise por turma e intervenção.
 
 ---
 
@@ -95,11 +92,11 @@ flowchart LR
 | Camada | Tecnologia |
 |--------|------------|
 | Backend | PHP 8.2+, Laravel 12 |
-| Banco de dados | SQLite (protótipo); compatível com MySQL/PostgreSQL |
-| Frontend | Blade, Bootstrap 5, CSS customizado |
-| Build | Vite 7, Tailwind CSS 4 |
+| Banco de dados | SQLite; compatível com MySQL/PostgreSQL |
+| Interface | Blade, Bootstrap 5, CSS customizado |
+| Build front-end | Vite 7, Tailwind CSS 4 |
 | Testes | PHPUnit 11 |
-| Deploy | Docker (Apache + PHP 8.4), Dokploy/Traefik |
+| Produção | Docker (Apache + PHP 8.4) |
 
 ---
 
@@ -107,19 +104,19 @@ flowchart LR
 
 ```
 app/
-  Http/Controllers/     # Intervenções, resultados, turmas, login
+  Http/Controllers/     # Intervenções, resultados, turmas, autenticação
   Services/             # Cenário, eficácia, agregação, geração sintética
   Models/               # Intervencao, Avaliacao, Turma, Aluno, User
 config/
-  intervencao.php       # Textos e conteúdos padrão das intervenções
-data/turmas/            # Datasets sintéticos (JSON) — fora do volume do SQLite
+  intervencao.php       # Textos e conteúdos das intervenções por cenário
+data/turmas/            # Datasets sintéticos (JSON)
 database/migrations/    # Schema do banco
-docs/                   # Documentação acadêmica e técnica
-resources/views/        # Templates Blade
-tests/                  # Testes unitários e de integração
+docs/                   # Metodologia, regras de negócio e guias técnicos
+resources/views/        # Telas do wizard e dashboards
+tests/                  # Testes automatizados
 ```
 
-Arquitetura: **monolito MVC** com **camada de serviços** para regras de negócio. Descrição completa em [`docs/DESENVOLVIMENTO-SISTEMA-AVALIACAO-INTERVENCOES.md`](docs/DESENVOLVIMENTO-SISTEMA-AVALIACAO-INTERVENCOES.md).
+Arquitetura **MVC** com camada de **serviços de domínio**. Documentação técnica completa: [`docs/DESENVOLVIMENTO-SISTEMA-AVALIACAO-INTERVENCOES.md`](docs/DESENVOLVIMENTO-SISTEMA-AVALIACAO-INTERVENCOES.md).
 
 ---
 
@@ -129,12 +126,12 @@ Arquitetura: **monolito MVC** com **camada de serviços** para regras de negóci
 
 - PHP 8.2+ (`pdo_sqlite`, `mbstring`, `openssl`)
 - [Composer](https://getcomposer.org)
-- Node.js 18+ (opcional; para compilar assets front-end)
+- Node.js 18+ (opcional, para compilar assets)
 
 ### Passo a passo
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/DalmarisLima/avaliacao-intervencoes.git
 cd avaliacao-intervencoes
 
 composer install
@@ -143,24 +140,19 @@ php artisan key:generate
 touch database/database.sqlite
 php artisan migrate:fresh --seed
 
-# Opcional: compilar assets
-npm install && npm run build
+npm install && npm run build   # opcional
 
-php artisan serve --port=8001
+php artisan serve
 ```
 
-Acesse **http://127.0.0.1:8001/login**
+Acesse **http://127.0.0.1:8000/login**
 
-**Credenciais de demonstração** (após `migrate:fresh --seed`):
-
-| Campo | Valor |
-|-------|-------|
+| Campo | Valor (após seed) |
+|-------|-------------------|
 | E-mail | `professor@example.com` |
 | Senha | `password` |
 
-> Se a porta 8000 já estiver em uso por outro projeto, use outra porta (`--port=8001`) ou encerre o processo anterior.
-
-Atalho com script Composer:
+Atalho:
 
 ```bash
 composer run setup
@@ -172,18 +164,16 @@ php artisan serve
 
 ## Configuração
 
-Principais variáveis em `.env`:
-
 | Variável | Descrição | Padrão |
 |----------|-----------|--------|
-| `APP_URL` | URL base da aplicação | `http://127.0.0.1:8000` |
-| `DB_CONNECTION` | Driver do banco | `sqlite` |
-| `RESULTADOS_CACHE_TTL` | TTL do cache de agregações (s) | `3600` |
-| `RESULTADOS_QUEUE_GENERATION` | Geração assíncrona via fila | `false` |
-| `INTERVENCAO_TURMA_PADRAO` | Turma usada ao criar intervenção | `2º Ano A` |
-| `INTERVENCAO_APP_TITULO` | Título exibido no login | (ver `config/intervencao.php`) |
+| `APP_URL` | URL base | `http://127.0.0.1:8000` |
+| `DB_CONNECTION` | Banco de dados | `sqlite` |
+| `RESULTADOS_CACHE_TTL` | Cache de agregações (segundos) | `3600` |
+| `RESULTADOS_QUEUE_GENERATION` | Geração em fila | `false` |
+| `INTERVENCAO_TURMA_PADRAO` | Turma ao criar intervenção | `2º Ano A` |
+| `INTERVENCAO_APP_TITULO` | Título na tela de login | ver `config/intervencao.php` |
 
-Conteúdos das intervenções por cenário podem ser ajustados em `config/intervencao.php` ou via seed (`EstudoConfiguracaoSeeder`).
+Textos das intervenções por cenário: `config/intervencao.php` ou `database/seeders/EstudoConfiguracaoSeeder.php`.
 
 ---
 
@@ -191,11 +181,9 @@ Conteúdos das intervenções por cenário podem ser ajustados em `config/interv
 
 ```bash
 composer run test
-# ou
-php artisan test
 ```
 
-A suíte cobre regras de cenário, geração sintética, fluxo de intervenção, login, API de resultados e integridade do schema SQLite.
+Cobertura: regras de cenário, geração sintética, fluxo completo de intervenção, autenticação, API de resultados e schema do banco.
 
 ---
 
@@ -205,13 +193,13 @@ A suíte cobre regras de cenário, geração sintética, fluxo de intervenção,
 docker compose -f docker-compose.prod.yml up --build
 ```
 
-Orientações detalhadas:
+Guias:
 
-- [`docs/DEPLOY-VPS-PAINEL.md`](docs/DEPLOY-VPS-PAINEL.md) — VPS com Dokploy
-- [`docs/DOKPLOY-BANCO-PERSISTENTE.md`](docs/DOKPLOY-BANCO-PERSISTENTE.md) — volume persistente do SQLite
-- [`docs/deploy.md`](docs/deploy.md) — notas gerais de deploy
+- [`docs/DEPLOY-VPS-PAINEL.md`](docs/DEPLOY-VPS-PAINEL.md)
+- [`docs/DOKPLOY-BANCO-PERSISTENTE.md`](docs/DOKPLOY-BANCO-PERSISTENTE.md)
+- [`docs/deploy.md`](docs/deploy.md)
 
-**Importante:** monte o volume persistente apenas em `database/` (SQLite). Os datasets em `data/turmas/` devem permanecer na imagem do container.
+Persistir apenas `database/` (SQLite). Manter `data/turmas/` na imagem do container.
 
 ---
 
@@ -219,19 +207,15 @@ Orientações detalhadas:
 
 | Documento | Conteúdo |
 |-----------|----------|
-| [`docs/DESENVOLVIMENTO-SISTEMA-AVALIACAO-INTERVENCOES.md`](docs/DESENVOLVIMENTO-SISTEMA-AVALIACAO-INTERVENCOES.md) | Desenvolvimento do sistema (requisitos, arquitetura, fluxos) |
+| [`docs/DESENVOLVIMENTO-SISTEMA-AVALIACAO-INTERVENCOES.md`](docs/DESENVOLVIMENTO-SISTEMA-AVALIACAO-INTERVENCOES.md) | Requisitos, arquitetura e fluxos |
 | [`docs/metodologia-avaliacao-eficacia.md`](docs/metodologia-avaliacao-eficacia.md) | Metodologia de eficácia |
 | [`docs/regras-negocio.md`](docs/regras-negocio.md) | Regras de negócio |
-| [`docs/PLANO-IMPLEMENTACAO.md`](docs/PLANO-IMPLEMENTACAO.md) | Plano de implementação por fases |
-| [`docs/ui.md`](docs/ui.md) | Guia de interface |
-| [`docs/GIT-GITHUB.md`](docs/GIT-GITHUB.md) | Publicação no GitHub |
+| [`docs/ui.md`](docs/ui.md) | Interface e componentes visuais |
 
 ---
 
-## Licença e uso acadêmico
+## Licença
 
-O framework Laravel é distribuído sob licença [MIT](https://opensource.org/licenses/MIT).
+Laravel — [MIT](https://opensource.org/licenses/MIT).
 
-O código e a documentação deste repositório foram produzidos no âmbito de pesquisa acadêmica. Recomenda-se citar a dissertação correspondente ao utilizar ou referenciar este artefato em trabalhos derivados.
-
-**Autora:** Dalmaris de Lima Moraes — PPGI/UFRN
+**Autora:** Dalmaris de Lima Moraes — PPGI/UFAL
