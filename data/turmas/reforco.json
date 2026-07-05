@@ -1,0 +1,130 @@
+[
+    {
+        "nome": "Adrielle Mota",
+        "pre": {
+            "aderencia": 18,
+            "temporalidade_inicio": 115,
+            "temporalidade_fim": 200,
+            "desempenho": 15
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 30,
+            "temporalidade_inicio": 19,
+            "temporalidade_fim": 55,
+            "desempenho": 28
+        }
+    },
+    {
+        "nome": "Bernardo Faro",
+        "pre": {
+            "aderencia": 20,
+            "temporalidade_inicio": 108,
+            "temporalidade_fim": 192,
+            "desempenho": 17
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 27,
+            "temporalidade_inicio": 20,
+            "temporalidade_fim": 58,
+            "desempenho": 26
+        }
+    },
+    {
+        "nome": "Cristina Sauro",
+        "pre": {
+            "aderencia": 16,
+            "temporalidade_inicio": 120,
+            "temporalidade_fim": 210,
+            "desempenho": 13
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 26,
+            "temporalidade_inicio": 20,
+            "temporalidade_fim": 59,
+            "desempenho": 25
+        }
+    },
+    {
+        "nome": "Diego Avelino",
+        "pre": {
+            "aderencia": 22,
+            "temporalidade_inicio": 102,
+            "temporalidade_fim": 188,
+            "desempenho": 19
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 15,
+            "temporalidade_inicio": 28,
+            "temporalidade_fim": 72,
+            "desempenho": 16
+        }
+    },
+    {
+        "nome": "Eliana Borba",
+        "pre": {
+            "aderencia": 25,
+            "temporalidade_inicio": 98,
+            "temporalidade_fim": 182,
+            "desempenho": 21
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 18,
+            "temporalidade_inicio": 26,
+            "temporalidade_fim": 68,
+            "desempenho": 18
+        }
+    },
+    {
+        "nome": "Felipe Maia",
+        "pre": {
+            "aderencia": 28,
+            "temporalidade_inicio": 90,
+            "temporalidade_fim": 175,
+            "desempenho": 24
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Gisele Neto",
+        "pre": {
+            "aderencia": 14,
+            "temporalidade_inicio": 125,
+            "temporalidade_fim": 215,
+            "desempenho": 12
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Hugo Quaresma",
+        "pre": {
+            "aderencia": 30,
+            "temporalidade_inicio": 88,
+            "temporalidade_fim": 170,
+            "desempenho": 26
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    }
+]

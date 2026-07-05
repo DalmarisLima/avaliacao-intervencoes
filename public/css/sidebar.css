@@ -1,0 +1,90 @@
+.sidebar {
+    width: var(--sidebar-width);
+    min-height: 100vh;
+    background: var(--color-surface);
+    border-right: 1px solid var(--color-border);
+    padding: var(--space-lg) var(--space-md);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.sidebar__brand {
+    padding: 0 var(--space-sm) var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-lg);
+}
+
+.sidebar__app-name {
+    display: block;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+}
+
+.sidebar__app-meta {
+    display: block;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-top: 2px;
+}
+
+.sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.sidebar__link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar__link:hover {
+    background: var(--color-surface-hover);
+    color: var(--color-text);
+}
+
+.sidebar__link.active {
+    background: var(--color-primary-soft);
+    color: var(--color-primary-hover);
+}
+
+.sidebar__footer {
+    margin-top: auto;
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.sidebar__user-name {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+    line-height: 1.3;
+}
+
+.sidebar__user-email {
+    display: block;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-top: 2px;
+    word-break: break-all;
+}
+
+.sidebar__logout {
+    margin-top: var(--space-md);
+    width: 100%;
+}
+
+/* Legado — compatibilidade */
+.profile { display: none; }
+.menu { display: none; }

@@ -1,0 +1,322 @@
+[
+    {
+        "nome": "Adriana Campos",
+        "pre": {
+            "aderencia": 48,
+            "temporalidade_inicio": 62,
+            "temporalidade_fim": 128,
+            "desempenho": 44
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 92,
+            "temporalidade_inicio": 8,
+            "temporalidade_fim": 42,
+            "desempenho": 78
+        }
+    },
+    {
+        "nome": "Bruno Queirós",
+        "pre": {
+            "aderencia": 52,
+            "temporalidade_inicio": 58,
+            "temporalidade_fim": 118,
+            "desempenho": 48
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 90,
+            "temporalidade_inicio": 9,
+            "temporalidade_fim": 38,
+            "desempenho": 80
+        }
+    },
+    {
+        "nome": "Cintia Moura",
+        "pre": {
+            "aderencia": 44,
+            "temporalidade_inicio": 66,
+            "temporalidade_fim": 134,
+            "desempenho": 40
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 88,
+            "temporalidade_inicio": 7,
+            "temporalidade_fim": 40,
+            "desempenho": 75
+        }
+    },
+    {
+        "nome": "Danilo Borges",
+        "pre": {
+            "aderencia": 50,
+            "temporalidade_inicio": 60,
+            "temporalidade_fim": 122,
+            "desempenho": 46
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 91,
+            "temporalidade_inicio": 8,
+            "temporalidade_fim": 45,
+            "desempenho": 74
+        }
+    },
+    {
+        "nome": "Esmeralda Vieira",
+        "pre": {
+            "aderencia": 40,
+            "temporalidade_inicio": 72,
+            "temporalidade_fim": 144,
+            "desempenho": 36
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 89,
+            "temporalidade_inicio": 18,
+            "temporalidade_fim": 55,
+            "desempenho": 72
+        }
+    },
+    {
+        "nome": "Fábio Azevedo",
+        "pre": {
+            "aderencia": 55,
+            "temporalidade_inicio": 55,
+            "temporalidade_fim": 112,
+            "desempenho": 51
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 87,
+            "temporalidade_inicio": 19,
+            "temporalidade_fim": 52,
+            "desempenho": 74
+        }
+    },
+    {
+        "nome": "Graziela Prado",
+        "pre": {
+            "aderencia": 46,
+            "temporalidade_inicio": 64,
+            "temporalidade_fim": 130,
+            "desempenho": 42
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 93,
+            "temporalidade_inicio": 8,
+            "temporalidade_fim": 41,
+            "desempenho": 77
+        }
+    },
+    {
+        "nome": "Humberto Assis",
+        "pre": {
+            "aderencia": 43,
+            "temporalidade_inicio": 68,
+            "temporalidade_fim": 138,
+            "desempenho": 39
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 52,
+            "temporalidade_inicio": 17,
+            "temporalidade_fim": 48,
+            "desempenho": 65
+        }
+    },
+    {
+        "nome": "Iara Lopes",
+        "pre": {
+            "aderencia": 58,
+            "temporalidade_inicio": 54,
+            "temporalidade_fim": 108,
+            "desempenho": 54
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 48,
+            "temporalidade_inicio": 19,
+            "temporalidade_fim": 56,
+            "desempenho": 62
+        }
+    },
+    {
+        "nome": "Jeferson Cabral",
+        "pre": {
+            "aderencia": 45,
+            "temporalidade_inicio": 65,
+            "temporalidade_fim": 132,
+            "desempenho": 41
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 55,
+            "temporalidade_inicio": 18,
+            "temporalidade_fim": 50,
+            "desempenho": 64
+        }
+    },
+    {
+        "nome": "Kassia Braga",
+        "pre": {
+            "aderencia": 38,
+            "temporalidade_inicio": 74,
+            "temporalidade_fim": 148,
+            "desempenho": 34
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 20,
+            "temporalidade_inicio": 12,
+            "temporalidade_fim": 35,
+            "desempenho": 50
+        }
+    },
+    {
+        "nome": "Leo Santana",
+        "pre": {
+            "aderencia": 35,
+            "temporalidade_inicio": 80,
+            "temporalidade_fim": 158,
+            "desempenho": 31
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 18,
+            "temporalidade_inicio": 14,
+            "temporalidade_fim": 38,
+            "desempenho": 44
+        }
+    },
+    {
+        "nome": "Lucas Andrade",
+        "pre": {
+            "aderencia": 35,
+            "temporalidade_inicio": 80,
+            "temporalidade_fim": 158,
+            "desempenho": 31
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Laura Nogueira",
+        "pre": {
+            "aderencia": 35,
+            "temporalidade_inicio": 80,
+            "temporalidade_fim": 158,
+            "desempenho": 31
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Marcos Pereira",
+        "pre": {
+            "aderencia": 35,
+            "temporalidade_inicio": 80,
+            "temporalidade_fim": 158,
+            "desempenho": 31
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Nathalia Couto",
+        "pre": {
+            "aderencia": 35,
+            "temporalidade_inicio": 80,
+            "temporalidade_fim": 158,
+            "desempenho": 31
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Otávio Gomes",
+        "pre": {
+            "aderencia": 35,
+            "temporalidade_inicio": 80,
+            "temporalidade_fim": 158,
+            "desempenho": 31
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Queila Freitas",
+        "pre": {
+            "aderencia": 35,
+            "temporalidade_inicio": 80,
+            "temporalidade_fim": 158,
+            "desempenho": 31
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Sandra Leal",
+        "pre": {
+            "aderencia": 35,
+            "temporalidade_inicio": 80,
+            "temporalidade_fim": 158,
+            "desempenho": 31
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Tiago Melo",
+        "pre": {
+            "aderencia": 35,
+            "temporalidade_inicio": 80,
+            "temporalidade_fim": 158,
+            "desempenho": 31
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    }
+]

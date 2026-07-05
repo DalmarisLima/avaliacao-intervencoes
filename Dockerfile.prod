@@ -1,0 +1,62 @@
+FROM node:20-alpine AS frontend
+WORKDIR /app
+
+COPY package.json ./
+RUN npm install
+
+COPY resources ./resources
+COPY public ./public
+COPY vite.config.js ./
+RUN npm run build
+
+FROM composer:2 AS vendor
+WORKDIR /app
+
+COPY composer.json composer.lock ./
+RUN composer install --optimize-autoloader --no-interaction --prefer-dist --no-scripts
+
+FROM php:8.4-apache
+WORKDIR /var/www/html
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+       libsqlite3-dev \
+       unzip \
+       git \
+       libonig-dev \
+       libxml2-dev \
+    && docker-php-ext-install pdo pdo_sqlite mbstring bcmath \
+    && a2enmod rewrite \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY . .
+COPY --from=vendor /app/vendor ./vendor
+COPY --from=frontend /app/public/build ./public/build
+
+RUN cp .env.example .env \
+    && sed -i 's/^APP_ENV=.*/APP_ENV=production/' .env \
+    && sed -i 's/^APP_DEBUG=.*/APP_DEBUG=false/' .env \
+    && sed -i 's|^APP_URL=.*|APP_URL=http://46.202.150.148:8088|' .env \
+    && sed -i 's/^DB_CONNECTION=.*/DB_CONNECTION=sqlite/' .env \
+    && sed -i 's|^DB_DATABASE=.*|DB_DATABASE=\/var\/www\/html\/database\/database.sqlite|' .env \
+    && mkdir -p /var/www/html/database \
+    && chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database
+
+RUN chmod +x /var/www/html/docker/entrypoint-prod.sh
+
+RUN cat <<'APACHECONF' > /etc/apache2/sites-available/000-default.conf
+<VirtualHost *:80>
+    DocumentRoot /var/www/html/public
+    <Directory /var/www/html/public>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+APACHECONF
+
+EXPOSE 80
+
+CMD ["/var/www/html/docker/entrypoint-prod.sh"]

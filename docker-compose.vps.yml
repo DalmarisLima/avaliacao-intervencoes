@@ -1,0 +1,20 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: intervencoes_app_web
+    restart: unless-stopped
+    environment:
+      APP_URL: ${APP_URL:-http://localhost}
+      APP_ENV: production
+      APP_DEBUG: "false"
+    ports:
+      - "80:80"
+    volumes:
+      - app_storage:/var/www/html/storage
+      - app_database:/var/www/html/database
+
+volumes:
+  app_storage:
+  app_database:

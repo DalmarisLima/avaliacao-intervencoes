@@ -1,0 +1,83 @@
+.rich-text-field {
+    margin-bottom: 0;
+}
+
+.rich-text-field .ql-toolbar.ql-snow {
+    border: 1px solid var(--color-border, #e8ebef);
+    border-radius: var(--radius-md, 8px) var(--radius-md, 8px) 0 0;
+    background: var(--color-surface-muted, #f1f3f5);
+    font-family: var(--font-sans, Inter, sans-serif);
+}
+
+.rich-text-field .ql-container.ql-snow {
+    border: 1px solid var(--color-border, #e8ebef);
+    border-top: none;
+    border-radius: 0 0 var(--radius-md, 8px) var(--radius-md, 8px);
+    background: var(--color-surface, #fff);
+    font-family: var(--font-sans, Inter, sans-serif);
+    font-size: var(--font-size-base, 0.9375rem);
+}
+
+.rich-text-field .ql-editor {
+    min-height: 220px;
+    line-height: 1.6;
+    color: var(--color-text, #3d4451);
+}
+
+.rich-text-field .ql-editor.ql-blank::before {
+    color: var(--color-text-muted, #9ca3af);
+    font-style: normal;
+}
+
+.rich-text-field--compact .ql-editor {
+    min-height: 140px;
+}
+
+.rich-text-content {
+    line-height: 1.6;
+    color: var(--color-text-secondary, #6b7280);
+}
+
+.rich-text-content p {
+    margin-bottom: 0.75rem;
+}
+
+.rich-text-content p:last-child {
+    margin-bottom: 0;
+}
+
+.rich-text-content ul,
+.rich-text-content ol {
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+}
+
+.rich-text-content--document {
+    min-height: 180px;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-border, #e8ebef);
+    border-radius: var(--radius-md, 8px);
+    background: var(--color-surface-muted, #f1f3f5);
+}
+
+.rich-text-content a {
+    color: var(--color-primary, #6b8cae);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.rich-text-content a:hover {
+    color: var(--color-primary-hover, #5a7a9a);
+}
+
+/* Botão de e-mail na barra do Quill (ícone SVG injetado em rich-text-editor.js) */
+.ql-snow .ql-toolbar button.ql-email {
+    width: 28px;
+}
+
+.ql-snow .ql-toolbar button.ql-email svg {
+    display: block;
+    height: 18px;
+    margin: 0 auto;
+    width: 18px;
+}

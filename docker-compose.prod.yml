@@ -1,0 +1,37 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: intervencoes_app_web
+    restart: unless-stopped
+    environment:
+      APP_URL: https://intervencoes.46.202.150.148.nip.io
+    ports:
+      - "8088:80"
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=dokploy-network
+      - traefik.http.routers.intervencoes-http.rule=Host(`intervencoes.46.202.150.148.nip.io`)
+      - traefik.http.routers.intervencoes-http.entrypoints=web
+      - traefik.http.routers.intervencoes-http.middlewares=intervencoes-https-redirect
+      - traefik.http.middlewares.intervencoes-https-redirect.redirectscheme.scheme=https
+      - traefik.http.routers.intervencoes.rule=Host(`intervencoes.46.202.150.148.nip.io`)
+      - traefik.http.routers.intervencoes.entrypoints=websecure
+      - traefik.http.routers.intervencoes.tls=true
+      - traefik.http.routers.intervencoes.tls.certresolver=letsencrypt
+      - traefik.http.services.intervencoes.loadbalancer.server.port=80
+    volumes:
+      - app_storage:/var/www/html/storage
+      - app_database:/var/www/html/database
+    networks:
+      - default
+      - dokploy-network
+
+volumes:
+  app_storage:
+  app_database:
+
+networks:
+  dokploy-network:
+    external: true

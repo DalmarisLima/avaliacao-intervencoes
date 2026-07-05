@@ -1,0 +1,322 @@
+/**
+ * Ajustes de responsividade (mobile / tablet).
+ * Carregado por último para sobrescrever estilos anteriores.
+ */
+
+@media (max-width: 991px) {
+    .app-shell--participante-ferramenta .app-main {
+        padding-top: var(--space-md);
+    }
+
+    .app-shell--participante-ferramenta .sidebar-toggle {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        overflow-x: clip;
+    }
+
+    /* —— Login —— */
+    .auth-screen {
+        padding: 1rem 0.75rem 1.5rem;
+    }
+
+    .auth-screen__panel {
+        max-width: none;
+    }
+
+    .auth-screen__invite {
+        padding: 0;
+    }
+
+    /* —— Shell participante (ferramenta) —— */
+    .app-shell--participante-ferramenta .app-main {
+        padding: 0.65rem 0.65rem 1.25rem;
+    }
+
+    .exp-ferramenta-topbar,
+    .exp-ambiente-teste-banner {
+        border-radius: var(--radius-sm);
+        margin-left: 0;
+        margin-right: 0;
+        max-width: none;
+    }
+
+    .exp-ferramenta-topbar__back {
+        text-align: left;
+        white-space: normal;
+    }
+
+    /* —— Questionário participante —— */
+    .study-header {
+        padding: 0.65rem 0;
+    }
+
+    .study-header__inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.65rem;
+        padding: 0 0.75rem;
+    }
+
+    .study-header__title {
+        font-size: var(--font-size-sm);
+        line-height: 1.35;
+    }
+
+    .study-main {
+        padding: 1rem 0.75rem 2rem;
+    }
+
+    .exp-apresentacao-bloco {
+        padding: 0.85rem !important;
+    }
+
+    .exp-etapa-acoes .btn {
+        width: 100%;
+    }
+
+    .study-header__inner .btn {
+        width: 100%;
+    }
+
+    .study-header__inner > .d-flex {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    /* —— Páginas internas —— */
+    .content-container {
+        padding: 0.75rem !important;
+    }
+
+    .page-title,
+    .page-header__title {
+        font-size: 1.35rem;
+        line-height: 1.25;
+    }
+
+    .page-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .page-header__actions {
+        width: 100%;
+    }
+
+    .page-header__actions .btn {
+        width: 100%;
+    }
+
+    .surface-card__header,
+    .surface-card__body {
+        padding: 1rem;
+    }
+
+    .action-bar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .action-bar .btn {
+        width: 100%;
+    }
+
+    .stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-tabs,
+    .exp-resultados__tabs .nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x proximity;
+    }
+
+    .nav-tabs .nav-link,
+    .exp-resultados__tabs .nav-link {
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        white-space: nowrap;
+    }
+
+    /* —— Formulários —— */
+    .form-wrapper {
+        padding: 0;
+    }
+
+    .form-card {
+        padding: 1rem;
+    }
+
+    .form-actions {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0.65rem;
+    }
+
+    .form-actions .btn {
+        margin: 0;
+        width: 100%;
+    }
+
+    .avaliacao-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+
+    .avaliacao-actions .btn {
+        width: 100%;
+    }
+
+    /* —— Resultados experimento (cards) —— */
+    .exp-resultados__metricas {
+        grid-template-columns: 1fr;
+    }
+
+    .exp-resultados__metrica-valor,
+    .exp-resultados__metrica-limiar {
+        overflow-wrap: anywhere;
+    }
+
+    .exp-resultados__card-meta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .exp-resultados__card-badges {
+        justify-content: flex-start;
+    }
+
+    .exp-resultados__card-acao {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .exp-resultados__card-acao .btn {
+        width: 100%;
+    }
+
+    .exp-resultados__card-acao-hint {
+        text-align: center;
+    }
+
+    /* —— Analytics / resultados professor —— */
+    .analytics-panel {
+        padding: 1rem;
+    }
+
+    .analytics-toolbar {
+        padding: 1rem;
+    }
+
+    .analytics-toolbar__inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .analytics-toolbar__field {
+        flex: 1 1 100%;
+        max-width: none;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .analytics-tab-content {
+        padding: 0.75rem !important;
+    }
+
+    .analytics-section-header__hint {
+        max-width: none;
+    }
+
+    .chart-canvas-wrap,
+    .chart-canvas-wrap--tall {
+        height: 260px;
+    }
+
+    .cenario-card__metrics {
+        grid-template-columns: 1fr;
+    }
+
+    /* —— Tabelas: rolagem horizontal contida —— */
+    .table-clean-wrap {
+        -webkit-overflow-scrolling: touch;
+        border-radius: var(--radius-sm);
+    }
+
+    .table-clean {
+        min-width: 36rem;
+    }
+
+    .table-clean-alunos {
+        min-width: 44rem;
+    }
+
+    .table-clean thead th,
+    .table-clean tbody td {
+        padding: 0.6rem 0.55rem;
+    }
+
+    /* —— Conteúdo rich text —— */
+    .rich-text-content img,
+    .rich-text-content table {
+        max-width: 100%;
+    }
+
+    .rich-text-content--document {
+        padding: 0.85rem;
+    }
+
+    /* —— Modais —— */
+    .modal-dialog {
+        margin: 0.65rem;
+    }
+
+    .modal-intervencoes-turma {
+        max-width: calc(100vw - 1.25rem);
+    }
+}
+
+@media (max-width: 576px) {
+    .auth-screen__card {
+        padding: 1rem;
+    }
+
+    .exp-ferramenta-topbar__meta {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .exp-ferramenta-topbar__user {
+        max-width: none;
+    }
+
+    .exp-ferramenta-topbar__logout .btn {
+        width: 100%;
+    }
+
+    .compare-chart__labels {
+        font-size: 0.65rem;
+    }
+
+    .analytics-compare-card__value {
+        font-size: 1.5rem;
+    }
+
+    .empty-state {
+        padding: 1.25rem 1rem;
+    }
+}

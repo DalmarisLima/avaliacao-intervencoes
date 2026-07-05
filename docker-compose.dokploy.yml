@@ -1,0 +1,22 @@
+# Use no Dokploy: Build Type = Docker Compose, Compose Path = docker-compose.dokploy.yml
+# Garante volume persistente para o SQLite entre rebuilds.
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    restart: unless-stopped
+    environment:
+      APP_URL: ${APP_URL:-https://estudo.46.202.150.148.nip.io}
+      APP_ENV: production
+      APP_DEBUG: "false"
+      EXPERIMENTO_ADMIN_EMAILS: ${EXPERIMENTO_ADMIN_EMAILS:-}
+    volumes:
+      - intervencoes_storage:/var/www/html/storage
+      - intervencoes_database:/var/www/html/database
+    networks:
+      - default
+
+volumes:
+  intervencoes_storage:
+  intervencoes_database:

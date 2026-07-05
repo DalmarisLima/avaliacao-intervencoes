@@ -1,0 +1,290 @@
+[
+    {
+        "nome": "André Peixoto",
+        "pre": {
+            "aderencia": 65,
+            "temporalidade_inicio": 42,
+            "temporalidade_fim": 95,
+            "desempenho": 60
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 55,
+            "temporalidade_inicio": 18,
+            "temporalidade_fim": 52,
+            "desempenho": 52
+        }
+    },
+    {
+        "nome": "Betina Lemos",
+        "pre": {
+            "aderencia": 70,
+            "temporalidade_inicio": 38,
+            "temporalidade_fim": 88,
+            "desempenho": 65
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 60,
+            "temporalidade_inicio": 16,
+            "temporalidade_fim": 48,
+            "desempenho": 56
+        }
+    },
+    {
+        "nome": "Caio Rangel",
+        "pre": {
+            "aderencia": 58,
+            "temporalidade_inicio": 48,
+            "temporalidade_fim": 105,
+            "desempenho": 53
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 44,
+            "temporalidade_inicio": 22,
+            "temporalidade_fim": 60,
+            "desempenho": 45
+        }
+    },
+    {
+        "nome": "Denise Magno",
+        "pre": {
+            "aderencia": 62,
+            "temporalidade_inicio": 44,
+            "temporalidade_fim": 98,
+            "desempenho": 57
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 50,
+            "temporalidade_inicio": 20,
+            "temporalidade_fim": 55,
+            "desempenho": 48
+        }
+    },
+    {
+        "nome": "Everaldo Paiva",
+        "pre": {
+            "aderencia": 55,
+            "temporalidade_inicio": 50,
+            "temporalidade_fim": 110,
+            "desempenho": 50
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 42,
+            "temporalidade_inicio": 23,
+            "temporalidade_fim": 62,
+            "desempenho": 42
+        }
+    },
+    {
+        "nome": "Flávia Corrêa",
+        "pre": {
+            "aderencia": 68,
+            "temporalidade_inicio": 40,
+            "temporalidade_fim": 92,
+            "desempenho": 63
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 58,
+            "temporalidade_inicio": 17,
+            "temporalidade_fim": 50,
+            "desempenho": 54
+        }
+    },
+    {
+        "nome": "Gustavo Araújo",
+        "pre": {
+            "aderencia": 52,
+            "temporalidade_inicio": 52,
+            "temporalidade_fim": 115,
+            "desempenho": 48
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 40,
+            "temporalidade_inicio": 24,
+            "temporalidade_fim": 64,
+            "desempenho": 40
+        }
+    },
+    {
+        "nome": "Helena Bastos",
+        "pre": {
+            "aderencia": 72,
+            "temporalidade_inicio": 36,
+            "temporalidade_fim": 84,
+            "desempenho": 67
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 62,
+            "temporalidade_inicio": 15,
+            "temporalidade_fim": 46,
+            "desempenho": 58
+        }
+    },
+    {
+        "nome": "Ivan Guerreiro",
+        "pre": {
+            "aderencia": 48,
+            "temporalidade_inicio": 56,
+            "temporalidade_fim": 120,
+            "desempenho": 44
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 36,
+            "temporalidade_inicio": 26,
+            "temporalidade_fim": 68,
+            "desempenho": 36
+        }
+    },
+    {
+        "nome": "Juliana Faria",
+        "pre": {
+            "aderencia": 60,
+            "temporalidade_inicio": 46,
+            "temporalidade_fim": 100,
+            "desempenho": 55
+        },
+        "pos": {
+            "adesao": 1,
+            "aderencia": 48,
+            "temporalidade_inicio": 21,
+            "temporalidade_fim": 58,
+            "desempenho": 46
+        }
+    },
+    {
+        "nome": "Kadu Siqueira",
+        "pre": {
+            "aderencia": 64,
+            "temporalidade_inicio": 43,
+            "temporalidade_fim": 96,
+            "desempenho": 59
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Luciana Feitosa",
+        "pre": {
+            "aderencia": 57,
+            "temporalidade_inicio": 49,
+            "temporalidade_fim": 108,
+            "desempenho": 52
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Marcos Coelho",
+        "pre": {
+            "aderencia": 66,
+            "temporalidade_inicio": 41,
+            "temporalidade_fim": 93,
+            "desempenho": 61
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Nadia Carmo",
+        "pre": {
+            "aderencia": 50,
+            "temporalidade_inicio": 54,
+            "temporalidade_fim": 118,
+            "desempenho": 46
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Oscar Vilaça",
+        "pre": {
+            "aderencia": 74,
+            "temporalidade_inicio": 34,
+            "temporalidade_fim": 80,
+            "desempenho": 69
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Paula Esteves",
+        "pre": {
+            "aderencia": 53,
+            "temporalidade_inicio": 51,
+            "temporalidade_fim": 112,
+            "desempenho": 49
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Quirino Belo",
+        "pre": {
+            "aderencia": 61,
+            "temporalidade_inicio": 45,
+            "temporalidade_fim": 99,
+            "desempenho": 56
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    },
+    {
+        "nome": "Rita Amorim",
+        "pre": {
+            "aderencia": 47,
+            "temporalidade_inicio": 57,
+            "temporalidade_fim": 122,
+            "desempenho": 43
+        },
+        "pos": {
+            "adesao": 0,
+            "aderencia": 0,
+            "temporalidade_inicio": 0,
+            "temporalidade_fim": 0,
+            "desempenho": 0
+        }
+    }
+]
