@@ -27,13 +27,11 @@ Aplicação web desenvolvida como **artefato de pesquisa** para a dissertação 
 
 O software implementa um protótipo funcional de **plataforma de avaliação de intervenções pedagógicas**. Nele, o professor:
 
-1. Lê a descrição de uma intervenção pedagógica simulada;
+1. Cadastra uma intervenção pedagógica;
 2. Define um **cenário de avaliação** (Flexível ou Difícil) e ajusta **limiares** de aderência, temporalidade e desempenho;
 3. Analisa **resultados agregados** por turma, com veredito de eficácia e interpretação pedagógica.
 
 Os dados de alunos utilizados no protótipo são **sintéticos e reprodutíveis** (arquivos JSON por turma e cenário), permitindo demonstração e validação do sistema sem integração com ambientes reais de gestão de aprendizagem.
-
-Este repositório contém **somente o núcleo da aplicação de intervenções**. O módulo de experimento com questionário e painel de pesquisa foi mantido em repositório separado, conforme a delimitação metodológica da dissertação.
 
 ---
 
